@@ -6,8 +6,6 @@ inputs:
     required: false
     default: "stretch-slim"
 runs:
-  # using: "docker"
-  # image: "docker://debian:${{ inputs.version }}"
   using: "composite"
   steps:
     - run: docker run debian:${{ inputs.version }}
