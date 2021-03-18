@@ -1,0 +1,10 @@
+name: "test"
+description: "test"
+inputs:
+  version:
+    description: "the version to use"
+    required: false
+    default: "stretch:slim"
+runs:
+  using: "docker"
+  image: "docker://debian:${{ inputs.version }}"
